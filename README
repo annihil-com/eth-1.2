@@ -1,0 +1,144 @@
+                   .__       _________            .___                   
+    .__       ____ |__|__  __\_   ___ \  ____   __| _/___________  ______
+  __|  |___  /    \|  \  \/  /    \  \/ /  _ \ / __ |/ __ \_  __ \/  ___/
+ /__    __/ |   |  \  |>    <\     \___(  <_> ) /_/ \  ___/|  | \/\___ \ 
+    |__|    |___|  /__/__/\_ \\______  /\____/\____ |\___  >__|  /____  >
+                 \/         \/       \/            \/    \/           \/ 
+					* http://www.nixCoders.org/ *
+
+
+1) Environnement vars
+2) In game commands
+3) Makefile options
+4) Dependencies
+5) Other features
+6) FAQ
+
+1) Environnement vars
+----------------------
+You can find and modify this vars in run.sh
+
+ETH_CONF_FILE
+	Config filename. Default is ~/.ethconf
+ETH_IRC_NICK
+	IRC nick. Default is $USER
+ETH_LOG_FILE
+	Log file use for verbose debug. Only works with debug build.
+CLGUID
+	For fake ET GUID
+GUID
+	For fake etpro GUID
+ETH_KILLSPAM
+	Custom killspam message
+ETH_DEATHSPAM
+	Custom deathspam message
+ETH_BANNER
+	Custom banner/stats line
+
+2) In game commands
+----------------------
+
+eth_find
+	Find all others eth users on server and add them as friend in the players list menu.
+eth_invite
+	Invite in your fireteam all friends in the players list menu.
+eth_randomkick
+	Vote kick player randomly.
+
+eth_cleanpk3
+	You can use this when you have 'Invalid pk3 error'. It remove all small pk3.
+eth_exec [COMMAND]
+	Execute a system command.
+
+eth_spam
+	Spam with 'eth powaa'.
+eth_sysinfo
+	Spam with system infos.
+eth_save
+	Saves the current ETH config (menu options) to a file. For example:
+	\eth_save .etproconf if you wanna save config for playing on etpro servers
+eth_load
+	Same as eth_save, but this one loads configs. For example:
+	\eth_load .etproconf when you wanna load config for playing on etpro
+eth_irc_send
+	If connected to IRC, it'll send a message to the bot channel
+eth_irc_chat
+	Same as eth_irc_send, but this one popups a window for writing a msg,
+	same as the window for global/fireteam/team chat. You can bind to a key
+	e.g. "bind X eth_irc_chat"
+eth_showbuddies
+	When IRC bot is connected, you can get list of other ETH users in console and see their ID and
+	server where they play
+eth_joinbuddy
+	Join the server where a buddy is playing, usage:
+	\eth_joinbuddy ID
+eth_invitebuddy
+	Invite a buddy to join you on the server, usage:
+	eth_invitebuddy ID
+eth_xmms
+	Spam with current song info playing in XMMS
+eth_amarok
+	Same as above but for amarok
+eth_set
+	Set eth variables directly from the console, so you can bind them or script them
+	e.g. 'bind eth_set aimfov 2.4'
+	or returns a list of all variables matching 'aim' like 'eth_set aim'
+eth_home
+	Connect to official *C server
+eth_fortune
+	Spam with fortune cookie (requires the 'fortune' package)
+
+
+3) Makefile options
+----------------------
+
+make
+	Compile in debug mode. The binary is not optimized.
+
+make RELEASE=1
+	Compile for release version. The binary is optimized and stripped.
+	
+make dist
+	Create a package for releasing. This one have sources, a compiled version,
+	a ghf package and the needed files of sdk.
+
+4) Dependencies
+----------------------
+
+Library use in eth.
+
+- binutils 
+- cppunit
+- libx11
+- libelf
+
+5) Other Features
+----------------------
+
+Player list
+	When "unmarked" category is opened, mouse1 will mark selected player as a friend
+	and mouse2 will mark it as a teamkiller
+	When "friends" or "teamkillers" category is opened, mouse1 will unmark selected player
+	and mouse2 will mark him with the opposite of what it is at that moment (tk>friend, friend>tk)
+
+6) FAQ
+----------------------
+
+I can't compile eth
+- Read installation instructions in this manual and check requirements. If you're still
+  unable to compile the bot yourself - use precombiled libETH.so and eth.pk3
+
+I can't open the console, why?
+- I don't know why, but i've noticed this on some distros. If the standard "~" key doesen't
+  work, you'll have to toggle your console by pressing ALTGR + 1. I don't know if there is
+  a solution to get this to normal. In case there is - notify us and we'll post it here.
+
+My global/team/fireteam popup doesn't work!
+- You've probably forgot to copy eth.pk3 to your ~/.etwolf/etmain/ folder. eth is using a
+  modified chat window which is inside eth.pk3 and won't load the one located in game's pk3 files.
+
+Medicbot is doing crazy things
+- It's still in an early test version, don't be surprised if you find a bug in it
+
+Punkbuster is kicking me for eth_ cvars!
+- eth >= 1.0 doesn't use cvars. You've probably used the old eth which inserted cvars into your config file(s). You can edit your config files by hand and remove all eth_ cvars or as a faster solution you can delete all configs from your ~/.etwolf/

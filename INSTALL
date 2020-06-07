@@ -1,0 +1,11 @@
+eth - Enemy Territory Hack
+--------------------------
+
+Copy libETH.so, run.sh to your game directory
+$ cp libETH.so run.sh /usr/local/your/game/directory/
+
+Copy eth.pk3 to your etmain folder
+$ cp eth.pk3 ~/.etwolf/etmain/
+
+Go to your game folder and launch the game
+$ ./run.sh

@@ -1,0 +1,70 @@
+v1.2 
+---------------------
+Landmine visibility hack
+Custom weapon sounds
+Bunch of other sound options
+Support for jaymod 2.0.4/2.1.0/2.1.1
+Gui tweaks
+Hitbox aiming
+Fixes
+
+v1.1 10/10/2006
+----------------------
+Moved repo to SourceForge
+Riflenade cam & bot
+Backtrace 
+Dlights
+Hud fix
+
+v1.1 22/09/2006
+----------------------
+Decided to update the CHANGELOG to make it appear as we pay attention to this file. - Sticky
+ETPRO 3.2.6 Final Support
+TCE Support -- Still a little buggy.
+
+v1.0 28/08/2006
+----------------------
+Tracker Support via IRC status-bot.
+Chat popup box for IRC.
+Multi Mod Support
+- ET 2.55/2.56/2.60/2.60b
+- etpro 3.2.4/3.2.5/3.2.6-beta1
+- etpub client 20051128/20060205/20060304/20060310/20060606
+- jaymod 1.4/1.5-beta4/1.5-beta5/2.0.1
+- whale 1.3/1.4-beta1
+
+v0.95 12/05/2006
+----------------------
+IRC status-bot support - Optionally logs on to IRC with the other ETH users to show who's playing where.
+IRC fireteam - Chat in IRC from ET with Global ETH users.
+Supports Jaymod, etpubclient, whalemod, etpub, shrub, etmain.
+ETH Hud added - For use with cg_draw2d 0.
+Mortar tracers - shows where your mortar will be going, along with other mortar's (both axis & allies).
+Mortar Cam / Hack - Displays where your mortar is going to land before you shoot.
+Player radar - Shows where your teammates, and enemys are around you.
+Added more chams.
+Remove speclock option.
+Improved sniper zoom removal.
+Improved aimbot.
+Panzer cam - Displays where you will be shooting the panzer.
+
+v0.95-beta 13/02/2006
+-----------------------
+Implemented multi-mod support such as whale, etpubclient.
+
+v0.6 - 10/11/2005
+-----------------------
+Aimbot (tag and vector based)
+Players chams
+Player name, dynamite, grenade, satchel esp
+Dynamite counter
+AutoDefense
+Sniper zoom removal
+Spawn timer
+Auto action (aim at dynamite and dead player with the correct weapon)
+
+v0.1 - beta - 09/08/2005
+-----------------------
+First release at elitecoders.org.
+Cvar system.
+Basic clienthook wallhack.
